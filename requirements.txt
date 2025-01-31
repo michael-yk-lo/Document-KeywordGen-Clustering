@@ -1,0 +1,12 @@
+PySimpleGUI
+pytesseract
+openai
+pdf2image
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+Pillow
+tqdm
+scipy
