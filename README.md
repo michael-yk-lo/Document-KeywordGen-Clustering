@@ -23,3 +23,32 @@ This repository provides an **document management solution** for processing **PD
 Install required packages using:  
 ```sh
 pip install -r requirements.txt
+```
+
+## Usage  
+### **1. Extract Keywords from a PDF**  
+1. Run the script:  
+   ```sh
+   python main.py
+   ```  
+2. Select **"1) Select PDF for Keyword Extraction"** in the GUI.  
+3. Processed results (JSON and CSV) will be stored in the `outputJSON/` and `outputCSV/` folders.  
+
+### **2. Perform Document Clustering**  
+1. Run the script and select **"2) Select Folder for Hierarchical Clustering"**.  
+2. The system will process all PDFs in the folder, extract text, generate embeddings, and cluster the documents.  
+3. Clustering results, along with visualizations (dendrograms, PCA, t-SNE), will be saved in the project folder.  
+
+## Output Files  
+- **Structured JSON files** (`outputJSON/`): Contains extracted fields from each application form.  
+- **CSV files** (`outputCSV/`): Stores extracted keywords and structured text.  
+- **Cluster Assignment CSV** (`clusterAssignment.csv`): Contains assigned cluster IDs for each document.  
+- **Visualization Files** (`Dendrogram.png`, `PCA.png`, `tSNE.png`): Help in understanding document relationships.  
+
+## Technologies Used  
+- **OCR Processing**: Tesseract  
+- **Text Structuring**: GPT-4o  
+- **Keyword Extraction**: TF-IDF, KeyBERT, OpenAI Embeddings, GPT-4o  
+- **Clustering Algorithms**: Hierarchical Clustering (Agglomerative), K-Means  
+- **Embedding Models**: OpenAI `text-embedding-3-large`  
+- **Visualization**: Matplotlib, Seaborn, PCA, t-SNE 
